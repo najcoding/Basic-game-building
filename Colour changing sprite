@@ -1,0 +1,22 @@
+import pygame
+def main():
+    pygame.init()
+    screen_width, screen_height = 500, 500
+    screen = pygame.display.set_mode((screen_width, screen_height ))
+    pygame.display.set_caption('color changing sprite')
+    colours = {
+        'red': pygame.Colour('red'),
+        'green': pygame.Colour('green'),
+        'green': pygame.Colour('green'),
+        'yellow': pygame.Colour('yellow'),
+        'white': pygame.Colour('white'),
+    }
+    current_colour = colours['white']
+    x, y = 30, 30
+    sprite_width, sprite_height = 60, 60
+    clock = pygame.time.Clock()
+    done = False
+    while not done:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                done = True
